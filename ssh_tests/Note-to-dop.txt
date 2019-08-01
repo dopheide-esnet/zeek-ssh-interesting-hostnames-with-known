@@ -1,1 +1,0 @@
-steal the ssh/interesting-hostnames test from core bro?
