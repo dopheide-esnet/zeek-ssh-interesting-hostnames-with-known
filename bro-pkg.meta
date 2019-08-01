@@ -1,0 +1,7 @@
+[package]
+version = 1.0.0
+tags = dns, ssh, interesting-hostnames 
+script_dir = scripts
+description = This script replaces the default ssh/interesting-hostnames and
+reduces the number of asyncrhonous when() calls made by Zeek. 
+test_command = cd tests && btest -d ssh_tests
