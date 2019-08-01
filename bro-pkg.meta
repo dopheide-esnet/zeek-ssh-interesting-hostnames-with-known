@@ -5,3 +5,7 @@ script_dir = scripts
 description = This script replaces the default ssh/interesting-hostnames and
 reduces the number of asyncrhonous when() calls made by Zeek. 
 test_command = cd tests && btest -d ssh_tests
+depends =
+  zeek >=2.5.0
+  foo *
+  https://github.com/dopheide-esnet/zeek-ssh-interesting-hostnames-with-known
