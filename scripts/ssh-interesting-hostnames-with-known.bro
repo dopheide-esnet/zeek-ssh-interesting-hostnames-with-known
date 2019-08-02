@@ -27,7 +27,7 @@ export {
 			/^ftp[0-9]*\./  &redef;
 }
 
-function check_ssh_interesting(id: conn_id, uid: string, hostname: string){
+function check_ssh_interesting(id: conn_id, uid: string, host: addr, hostname: string){
 	if ( interesting_hostnames in hostname ){
 		NOTICE([$note=Interesting_Hostname_Login,
 			$msg=fmt("Possible SSH login involving a %s %s with an interesting hostname.",
@@ -39,12 +39,12 @@ function check_ssh_interesting(id: conn_id, uid: string, hostname: string){
 
 function check_ssh_hostname(id: conn_id, uid: string, host: addr){
 	if(host in Known::hosts){
-		check_ssh_interesting(id,uid,Known::hosts[host]);
+		check_ssh_interesting(id,uid,host,Known::hosts[host]);
 	}else{
 		# If this is the first time we're seeing the hostname, Known::hosts might
 		# not be populated yet.
 		when ( local hostname = lookup_addr(host) ){
-			check_ssh_interesting(id,uid,hostname);
+			check_ssh_interesting(id,uid,host,hostname);
 		}
 	}
 }
