@@ -4,4 +4,4 @@ tags = dns, ssh, interesting-hostnames
 script_dir = scripts
 description = This script replaces the default ssh/interesting-hostnames and reduces the number of asyncrhonous when() calls made by Zeek. 
 test_command = cd tests && btest -d ssh_tests
-depends = https://github.com/dopheide-esnet/zeek-known-hosts-with-dns
+depends = https://github.com/dopheide-esnet/zeek-known-hosts-with-dns >= 1.0.0
