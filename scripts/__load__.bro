@@ -1,1 +1,1 @@
-@load ssh-interesting-hostnames-with-known
+@load ./ssh-interesting-hostnames-with-known
