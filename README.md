@@ -13,5 +13,5 @@ asynchronous when() calls for lookup_addr().
 
 By replacing known-hosts with known-hosts-with-dns, we keep a running
 table of local DNS lookups.  Combined with this policy, it can reduce
-the DNS queries from our Zeek systems by over 99%.      
+the DNS queries from our Zeek systems by over 90%.      
 
