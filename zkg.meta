@@ -1,5 +1,5 @@
 [package]
-version = 1.2
+version = 1.2.1
 tags = dns, ssh, interesting-hostnames 
 script_dir = scripts
 description = This script replaces the default ssh/interesting-hostnames and reduces the number of asyncrhonous when() calls made by Zeek. 
