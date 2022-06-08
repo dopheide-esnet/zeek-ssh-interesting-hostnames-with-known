@@ -43,7 +43,11 @@ function check_ssh_hostname(id: conn_id, uid: string, host: addr){
 	}else{
 		# If this is the first time we're seeing the hostname, Known::hosts might
 		# not be populated yet.
+@if ( Version::at_least("5.0") )
+                when [id, uid, host] ( local hostname = lookup_addr(host) ){
+@else
 		when ( local hostname = lookup_addr(host) ){
+@endif
 			check_ssh_interesting(id,uid,host,hostname);
 		}
 	}
